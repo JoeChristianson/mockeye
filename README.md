@@ -104,10 +104,31 @@ const schema = [{workEmail:"email",workZipCode:"zipcode"},2]
 mockeye.write("../mockdata/employeeData.json",schema)
 ```
 
-#### types
+#### type names list
 
-below are the current type names, when the list reaches a certain length, I'll create a web page that will contain this list.
+Below are the current type names. When the list reaches a certain length, I'll create a web page that will contain this list.
 
+
+- "firstName"
+- "lastName"
+- "email"
+- "phone"
+- "tf" (true or false)
+- "url"
+- "date"
+- "timeStamp"
+- "year"
+- "month"
+- "day"
+- "dayOfWeek"
+- "zipCode"
+- "zipCodeFull"
+- "fileName"
+- "extension"
+- "string"
+- "number"
+- "id"
+- "paragraph"
 
 ## licensing
 
