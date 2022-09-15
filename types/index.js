@@ -17,7 +17,7 @@ const types = {
     ...locationTypes,
     ...dateTimeTypes,
     ...webTypes,
-    day: ()=>{
+    dayOfWeek: ()=>{
         return [
             "Sunday",
             "Monday",

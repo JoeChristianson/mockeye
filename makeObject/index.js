@@ -11,7 +11,12 @@ const makeObject = (obj)=>{
         else if(typeof el === "object"){
             newObj[key] = makeObject(el)
         }else{
-            newObj[key] = randomElementFromArray(types[newObj[key]]());
+            if(types[el]){
+                newObj[key] = randomElementFromArray(types[newObj[key]]());
+            }else{
+                console.log("unknown type name provided")
+                newObj[key] = "unknown type name provided"
+            }
         }
     }
     return newObj
