@@ -22,7 +22,7 @@ A full list of the available type names appears in the 'type names list' section
 
 ### typeSchema
 
-You can use these types to make a schema, similar to how one would with ORMs' schemas. A schema would look like the following
+You can use these type names to create a schema. A schema would look like the following
 
 ```
 {
@@ -50,7 +50,7 @@ the above schema might look like this:
 
 #### arrays
 
-Schemas can also be or contain arrays. When an array is in a schema, array[0] is the typename (or a nested type schema), and array[1] is the number of elements.
+Schemas can also be or contain arrays. When an array is in a schema, array[0] is a typename (or a nested type schema), and array[1] is the number of elements.
 
 for example, the schema
 ```
@@ -93,10 +93,9 @@ would log out
 ```
 ### mockeye.write()
 
-mockeye.write takes in (path,typeSchema) in as arguments. The path is to where the file is written. The typeSchema is either a typename or a schema, which is the 
-same as what would be passed into the fake() method as well. 
+mockeye.write takes in (path,typeSchema) in as arguments. The path is to where the file is written. The typeSchema is either a typename or a schema (this is the same as the first argument of the fake method).
 
-The method does not return anything, but rather turns the mock data into JSON and saves it at the specified path.
+The mockeye.write() method does not return anything, but rather converts the mock data into JSON and saves that JSON at the specified path.
 
 A correct usage would look like 
 ```
