@@ -10,7 +10,12 @@ const makeArray = (type,number)=>{
         }else if(typeof type === "object"){
             element = makeObject(type)
         }else{
-            element = randomElementFromArray(types[type]());
+            try{
+                element = randomElementFromArray(types[type]());
+            }catch(err){
+                console.log("unknown type name provided")
+                element = "unknown type name provided"
+            }
         }
         newArray.push(element)
     }

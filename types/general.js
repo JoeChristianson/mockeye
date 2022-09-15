@@ -14,6 +14,9 @@ const types = {
     },
     id:()=>{
         return [v4()]
+    },
+    number:()=>{
+        return [randomNumberFromRange(0,100000)]
     }
 }
 
