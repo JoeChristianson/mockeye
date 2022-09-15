@@ -1,0 +1,26 @@
+{
+  "name": "mockeye",
+  "version": "1.0.0",
+  "description": "A node package for generating JSON of mock structured data",
+  "main": "index.js",
+  "type":"module",
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoeChristianson/mockeye.git"
+  },
+  "keywords": [
+    "mock",
+    "data",
+    "fake",
+    "JSON"
+  ],
+  "author": "Joe Christianson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JoeChristianson/mockeye/issues"
+  },
+  "homepage": "https://github.com/JoeChristianson/mockeye#readme"
+}
