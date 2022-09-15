@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A node package for generating JSON of mock structured data",
   "main": "index.js",
+  "type":"module",
   "scripts": {
     "test": "node test/index.js"
   },
