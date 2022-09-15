@@ -7,7 +7,7 @@ const randomElementFromArray = (array)=>{
 }
 
 const randomNumberFromRange = (min,max)=>{
-    return(min+Math.floor(Math.random()*max))
+    return(min+Math.floor(Math.random()*(max-min)))
 }
 
 module.exports = {randomElementFromArray,randomNumberFromRange}

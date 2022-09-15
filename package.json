@@ -23,5 +23,6 @@
   },
   "homepage": "https://github.com/JoeChristianson/mockeye#readme",
   "dependencies": {
+    "uuid": "^9.0.0"
   }
 }
