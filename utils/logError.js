@@ -2,4 +2,4 @@ const logError = (err)=>{
     console.log(err)
 }
 
-export default logError
+module.exports = logError

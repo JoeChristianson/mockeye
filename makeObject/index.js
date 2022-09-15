@@ -1,12 +1,12 @@
-import { randomElementFromArray } from "../utils/random.js";
-import * as types from "../types/index.js"
-import makeArray from "../makeArray/index.js";
+const {randomElementFromArray} = require("../utils/random.js")
+const types = require("../types/index.js")
+
 const makeObject = (obj)=>{
     const newObj = {...obj};
     for(let key in newObj){
         const el = newObj[key]
         if(Array.isArray(el)){
-            newObj[key] = makeArray(...el)
+            newObj[key] = require("../makeArray/index.js")(...el)
         }
         else if(typeof el === "object"){
             newObj[key] = makeObject(el)
@@ -17,4 +17,4 @@ const makeObject = (obj)=>{
     return newObj
 }
 
-export default makeObject
+module.exports = makeObject
