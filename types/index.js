@@ -1,4 +1,8 @@
-export const day = ()=>{
+const { randomElementFromArray, randomNumberFromRange } = require("../utils/random.js")
+
+const arrayFromTextFile = require("../utils/arrayFromTextFile.js")
+
+module.exports.day = ()=>{
     return [
         "Sunday",
         "Monday",
@@ -10,7 +14,7 @@ export const day = ()=>{
     ]
 }
 
-export const firstName = ()=>{
+module.exports.firstName = ()=>{
     return [
         "Bob",
         "Steve",
@@ -22,7 +26,7 @@ export const firstName = ()=>{
     ]
 }
 
-export const lastName = ()=>{
+module.exports.lastName = ()=>{
     return [
         "Christianson",
         "Earle",
@@ -32,4 +36,26 @@ export const lastName = ()=>{
         "Hearst",
         "James"
     ]
+}
+
+module.exports.paragraph = ()=>{
+    return arrayFromTextFile("lorem",{remove:[/(\r\n|\n|\r)/gm]})
+}
+
+module.exports.email = ()=>{
+    const chars = 'abcdefghijklmnopqrstuvwxyz1234567890';
+    let string = '';
+    const userNameLength = randomNumberFromRange(6,15)
+    for(let i=0; i<userNameLength; i++){
+        
+        string += randomElementFromArray(chars);
+
+    }
+    const domains = ["@gmail.com","@hotmail.com"]
+    string+=randomElementFromArray(domains)
+    return [string]
+}
+
+module.exports.tf = ()=>{
+    return [true,false]
 }
