@@ -9,8 +9,10 @@ const locationTypes = require("./location")
 const contactTypes = require("./contact")
 const generalTypes = require("./general")
 const fileTypes = require("./file")
+const personalTypes = require("./personal")
 
 const types = {
+    ...personalTypes,
     ...fileTypes,
     ...generalTypes,
     ...contactTypes,
