@@ -2,31 +2,45 @@ const { randomElementFromArray, randomNumberFromRange } = require("../utils/rand
 
 const arrayFromTextFile = require("../utils/arrayFromTextFile.js")
 
-module.exports.day = ()=>{
-    return [
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
-    ]
-}
+// specific types
+const webTypes = require("./web")
+const dateTimeTypes = require("./dateTime")
+const locationTypes = require("./location")
+const contactTypes = require("./contact")
+const generalTypes = require("./general")
+const fileTypes = require("./file")
 
-module.exports.firstName = ()=>{
-    return [
-        "Bob",
-        "Steve",
-        "Randy",
-        "Emily",
+const types = {
+    ...fileTypes,
+    ...generalTypes,
+    ...contactTypes,
+    ...locationTypes,
+    ...dateTimeTypes,
+    ...webTypes,
+    day: ()=>{
+        return [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+        ]
+    },    
+    firstName:()=>{
+        return [
+            "Bob",
+            "Steve",
+            "Randy",
+            "Emily",
         "Jordan",
         "Nancy",
         "Ooma"
     ]
-}
+},
 
-module.exports.lastName = ()=>{
+lastName: ()=>{
     return [
         "Christianson",
         "Earle",
@@ -37,25 +51,28 @@ module.exports.lastName = ()=>{
         "James"
     ]
 }
-
-module.exports.paragraph = ()=>{
+,
+paragraph: ()=>{
     return arrayFromTextFile("lorem",{remove:[/(\r\n|\n|\r)/gm]})
 }
-
-module.exports.email = ()=>{
+,
+email:()=>{
     const chars = 'abcdefghijklmnopqrstuvwxyz1234567890';
     let string = '';
     const userNameLength = randomNumberFromRange(6,15)
     for(let i=0; i<userNameLength; i++){
         
         string += randomElementFromArray(chars);
-
+        
     }
     const domains = ["@gmail.com","@hotmail.com"]
     string+=randomElementFromArray(domains)
     return [string]
-}
+},
 
-module.exports.tf = ()=>{
+tf:()=>{
     return [true,false]
 }
+}
+
+module.exports = types
