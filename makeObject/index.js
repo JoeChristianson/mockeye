@@ -1,5 +1,5 @@
 const {randomElementFromArray} = require("../utils/random.js")
-const types = require("../types/index.js")
+const types = require("../types/index.js");
 
 const makeObject = (obj)=>{
     const newObj = {...obj};
@@ -7,6 +7,9 @@ const makeObject = (obj)=>{
         const el = newObj[key]
         if(Array.isArray(el)){
             newObj[key] = require("../makeArray/index.js")(...el)
+        }
+        else if (typeof newObj[key] === "object" && newObj[key].template){
+            newObj[key]= require("../make/index.js")(newObj[key])
         }
         else if(typeof el === "object"){
             newObj[key] = makeObject(el)
