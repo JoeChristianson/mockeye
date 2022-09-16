@@ -20,6 +20,11 @@ The library includes type names, which are specific strings. Some type names inc
 
 A full list of the available type names appears in the 'type names list' section further below.
 
+The type names are also available at: 
+```mockeye.types```
+
+Using the mockeye.types object allows autofill on an editor, so it is the best way of avoiding spelling errors. Additionally, you may not have to look up the documentation for the name.
+
 ### typeSchema
 
 You can use these type names to create a schema. A schema would look like the following
@@ -61,6 +66,29 @@ would yield an array like
 ```
 [2000,2003,1979,2017]
 
+```
+
+###
+
+Schemas can also use templates for string values. To use, make an object like so:
+```
+{
+  template:true,
+  typesArray:[<typeNamesListedHere>],
+  string:<string here>}
+```
+Within the string, "*<index number of type in typesArray>*" will be replaced with a value of the type.
+
+For example:
+```
+{template:true,
+typesArray:["city","firstName","lastName"]
+template:"My name is *1* *2*, and I live in *0*. That's why I am called *0* *1*."
+}
+```
+Would produce:
+```
+"My name is Jane Seymour, and I live in Tallahassee. That's why I am called Tallahassee Jane."
 ```
 
 ## methods
