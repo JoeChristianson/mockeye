@@ -68,7 +68,7 @@ would yield an array like
 
 ```
 
-###
+### String Templates
 
 Schemas can also use templates for string values. To use, make an object like so:
 ```
