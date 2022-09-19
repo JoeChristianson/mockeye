@@ -8,6 +8,10 @@ const make = (typeSchema)=>{
     if(Array.isArray(typeSchema)){
         return makeArray(...typeSchema)
     }
+    else if (typeof typeSchema === "object" && typeSchema.type){
+        const result = require("../makeTypeWithOptions")(typeSchema.type,typeSchema.options)
+        return result
+    }
     else if (typeof typeSchema === "object" && typeSchema.template){
         const result = require("../utils/templater")(typeSchema.typesArray,typeSchema.string)
         return result

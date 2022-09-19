@@ -34,30 +34,7 @@ const types = {
             "Saturday"
         ]
     },    
-    firstName:()=>{
-        return [
-            "Bob",
-            "Steve",
-            "Randy",
-            "Emily",
-        "Jordan",
-        "Nancy",
-        "Ooma"
-    ]
-},
 
-lastName: ()=>{
-    return [
-        "Christianson",
-        "Earle",
-        "Ingels",
-        "Peterson",
-        "Jaspers",
-        "Hearst",
-        "James"
-    ]
-}
-,
 paragraph: ()=>{
     return arrayFromTextFile("lorem",{remove:[/(\r\n|\n|\r)/gm]})
 }

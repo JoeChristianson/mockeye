@@ -1,6 +1,3 @@
-const {randomElementFromArray} = require("../utils/random.js")
-const types = require("../types/index.js");
-
 const makeObject = (obj)=>{
     const newObj = {...obj};
     for(let key in newObj){
