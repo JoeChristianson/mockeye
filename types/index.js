@@ -10,8 +10,12 @@ const contactTypes = require("./contact")
 const generalTypes = require("./general")
 const fileTypes = require("./file")
 const personalTypes = require("./personal")
+const htmlTypes = require("./htmlTypes")
+
+console.log(htmlTypes);
 
 const types = {
+    ...htmlTypes,
     ...personalTypes,
     ...fileTypes,
     ...generalTypes,

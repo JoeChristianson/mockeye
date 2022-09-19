@@ -8,4 +8,7 @@ for (let type in types){
 }
 types = newTypes
 
+// console.log(types)
+console.log(fake(types.img))
+
 module.exports = {fake,write,types}
