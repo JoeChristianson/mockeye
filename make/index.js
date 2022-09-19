@@ -16,12 +16,9 @@ const make = (typeSchema)=>{
         return makeObject(typeSchema)
     }else if(typeof typeSchema === "string"){
         try{
-            console.log("this is the array",types[typeSchema]());
-            console.log("made it this far")
             const array = types[typeSchema]()
             return randomElementFromArray(array)
         }catch(err){
-            console.log("unknown type name provided")
             return "unknown type name provided"
         }
     }
