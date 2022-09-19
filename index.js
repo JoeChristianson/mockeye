@@ -9,6 +9,6 @@ for (let type in types){
 types = newTypes
 
 // console.log(types)
-console.log(fake(types.img))
+console.log(fake([{firstName:["firstName",4],lastName:"lastName"},2]))
 
 module.exports = {fake,write,types}

@@ -1,8 +1,10 @@
 const separatedNumbers = require("../utils/separatedNumbers")
 const fs = require("fs")
 const types = {
-    url:()=>{
-        return ["http://www.google.com"]
+    url:(options)=>{
+        const defaultAttributes = {string:"http://www.google.com"}
+        const attributes = {defaultAttributes,...options}
+        return [attributes.string]
     },
     ipAddress:()=>{
         return [separatedNumbers([[0,255],[0,255],[0,255],[0,255]],".")]
